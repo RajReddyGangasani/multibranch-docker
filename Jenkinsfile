@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t image2 .'
+                sh 'docker build -t image5 .'
             }
         }
         stage ("Tag") {
