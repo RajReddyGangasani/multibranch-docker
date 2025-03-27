@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t image6 .'
+                sh 'docker build -t image12 .'
             }
         }
         stage ("Tag") {
             steps {
-                sh 'docker tag image3 shaikmustafa/paytm:movie'
+                sh 'docker tag image3 rajgangasani/paytm:movie'
             }
         }
         stage ("Push") {
@@ -23,7 +23,7 @@ pipeline {
         }
         stage ("Deploy") {
             steps {
-                sh 'docker run -itd --name movie-app -p 3333:80 shaikmustafa/paytm:movie'
+                sh 'docker run -itd --name movie-app -p 3333:80 rajgangasani/paytm:movie'
             }
         }
     }
